@@ -4,6 +4,7 @@ import {
   bsc as bsc_,
   bscTestnet,
   goerli,
+  nexi as nexi_,
   mainnet,
   zkSync,
   zkSyncTestnet,
@@ -19,6 +20,7 @@ export const CHAIN_QUERY_NAME = {
   [ChainId.ETHEREUM]: 'eth',
   [ChainId.GOERLI]: 'goerli',
   [ChainId.BSC]: 'bsc',
+  [ChainId.NEXI]: 'nexi',
   [ChainId.BSC_TESTNET]: 'bscTestnet',
   [ChainId.ARBITRUM_ONE]: 'arb',
   [ChainId.ARBITRUM_GOERLI]: 'arbGoerli',
@@ -52,6 +54,21 @@ const bsc = {
     default: {
       ...bsc_.rpcUrls.default,
       http: ['https://bsc-dataseed.binance.org/'],
+    },
+  },
+} satisfies Chain
+
+const nexi = {
+  ...nexi_,
+  rpcUrls: {
+    ...nexi_.rpcUrls,
+    public: {
+      ...nexi_.rpcUrls.public,
+      http: ['https://rpc.chain.nexi.technology'],
+    },
+    default: {
+      ...nexi_.rpcUrls.default,
+      http: ['https://rpc.chain.nexi.technology'],
     },
   },
 } satisfies Chain
@@ -108,6 +125,7 @@ export const CHAINS = [
   bsc,
   mainnet,
   bscTestnet,
+  nexi,
   goerli,
   zkSync,
   zkSyncTestnet,

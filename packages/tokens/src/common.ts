@@ -1,5 +1,32 @@
 import { ChainId, ERC20Token } from '@pancakeswap/sdk'
 
+export const USDT_NEXI = new ERC20Token(
+  ChainId.NEXI,
+  '0x69F6c3e18028012Fbad46A9e940889daF6b4241D',
+  18,
+  'USDT',
+  'Tether USD',
+  'https://tether.to/',
+)
+
+export const CASHUSD_NEXI = new ERC20Token(
+  ChainId.NEXI,
+  '0x69F6c3e18028012Fbad46A9e940889daF6b4241D',
+  18,
+  'CASHUSD',
+  'CashUSD',
+  'https://cashusd.online/',
+)
+
+export const ORBITEX_MAINNET = new ERC20Token(
+  ChainId.NEXI,
+  '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
+  18,
+  'ORBITEX',
+  'Orbitex Token',
+  'https://www.orbitex.online/',
+)
+
 export const CAKE_MAINNET = new ERC20Token(
   ChainId.BSC,
   '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
@@ -217,6 +244,7 @@ export const USDC = {
 }
 
 export const USDT = {
+  [ChainId.NEXI]: USDT_NEXI,
   [ChainId.BSC]: USDT_BSC,
   [ChainId.ETHEREUM]: USDT_ETH,
   [ChainId.ARBITRUM_ONE]: new ERC20Token(
@@ -269,4 +297,5 @@ export const STABLE_COIN = {
   [ChainId.POLYGON_ZKEVM]: USDT[ChainId.POLYGON_ZKEVM],
   [ChainId.POLYGON_ZKEVM_TESTNET]: USDT[ChainId.POLYGON_ZKEVM_TESTNET],
   [ChainId.LINEA_TESTNET]: USDC[ChainId.LINEA_TESTNET],
+  [ChainId.NEXI]: CASHUSD_NEXI,
 } satisfies Record<ChainId, ERC20Token>

@@ -12,6 +12,7 @@ export const CHAIN_ID_TO_CHAIN_NAME = {
   [ChainId.BSC]: 'bsc',
   [ChainId.ETHEREUM]: 'ethereum',
   [ChainId.GOERLI]: '',
+  [ChainId.NEXI]: 'nexi',
   [ChainId.BSC_TESTNET]: '',
   [ChainId.ARBITRUM_ONE]: 'arbitrum',
   [ChainId.ARBITRUM_GOERLI]: '',

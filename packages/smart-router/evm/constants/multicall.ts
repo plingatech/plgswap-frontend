@@ -35,6 +35,7 @@ export const BATCH_MULTICALL_CONFIGS: ChainMap<BatchMulticallConfigs> = {
   },
   [ChainId.ETHEREUM]: DEFAULT,
   [ChainId.GOERLI]: DEFAULT,
+  [ChainId.NEXI]: DEFAULT,
   [ChainId.ARBITRUM_ONE]: {
     defaultConfig: {
       multicallChunk: 10,

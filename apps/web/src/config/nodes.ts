@@ -23,6 +23,11 @@ export const SERVER_NODES = {
     getNodeRealUrlV2(ChainId.GOERLI, process.env.SERVER_NODE_REAL_API_GOERLI),
     'https://eth-goerli.public.blastapi.io',
   ].filter(Boolean),
+  [ChainId.NEXI]: [
+    'https://chain.nexilix.com',
+    'https://bsc-dataseed1.binance.org',
+    'https://chain.nexi.evmnode.online',
+  ].filter(Boolean),
   [ChainId.ARBITRUM_ONE]: arbitrum.rpcUrls.public.http,
   [ChainId.ARBITRUM_GOERLI]: arbitrumGoerli.rpcUrls.public.http,
   [ChainId.POLYGON_ZKEVM]: POLYGON_ZKEVM_NODES,
@@ -45,6 +50,11 @@ export const PUBLIC_NODES = {
     getNodeRealUrlV2(ChainId.BSC, process.env.NEXT_PUBLIC_NODE_REAL_API_ETH),
     'https://bsc-dataseed1.defibit.io',
     'https://bsc-dataseed1.binance.org',
+  ].filter(Boolean),
+  [ChainId.NEXI]: [
+    'https://chain.nexilix.com',
+    'https://bsc-dataseed1.binance.org',
+    'https://chain.nexi.evmnode.online',
   ].filter(Boolean),
   [ChainId.BSC_TESTNET]: ['https://data-seed-prebsc-1-s1.binance.org:8545'],
   [ChainId.ETHEREUM]: [

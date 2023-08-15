@@ -29,6 +29,11 @@ const SWAP_INFO_BY_CHAIN = {
     stable: STABLESWAP_SUBGRAPH_CLIENT,
     // v3: V3_SUBGRAPH_URLS[ChainId.BSC],
   },
+  [ChainId.NEXI]: {
+    v2: INFO_CLIENT,
+    stable: STABLESWAP_SUBGRAPH_CLIENT,
+    // v3: V3_SUBGRAPH_URLS[ChainId.BSC],
+  },
   [ChainId.ETHEREUM]: {
     v2: INFO_CLIENT_ETH,
     // v3: V3_SUBGRAPH_URLS[ChainId.ETHEREUM],

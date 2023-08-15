@@ -6,6 +6,7 @@ export enum ChainId {
   ETHEREUM = 1,
   GOERLI = 5,
   BSC = 56,
+  NEXI = 4242,
   BSC_TESTNET = 97,
   ZKSYNC_TESTNET = 280,
   ZKSYNC = 324,
@@ -23,11 +24,14 @@ export const FACTORY_ADDRESS = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73'
 
 const FACTORY_ADDRESS_ETH = '0x1097053Fd2ea711dad45caCcc45EfF7548fCB362'
 
+const FACTORY_ADDRESS_NEXI = '0x5A67Ba6334Ee7990d1f95C8F1414d2AC7A99bc89'
+
 export const FACTORY_ADDRESS_MAP = {
   [ChainId.ETHEREUM]: FACTORY_ADDRESS_ETH,
   [ChainId.GOERLI]: FACTORY_ADDRESS_ETH,
   [ChainId.BSC]: FACTORY_ADDRESS,
   [ChainId.BSC_TESTNET]: '0x6725f303b657a9451d8ba641348b6761a6cc7a17',
+  [ChainId.NEXI]: FACTORY_ADDRESS_NEXI,
   [ChainId.ARBITRUM_ONE]: '0x02a84c1b3BBD7401a5f7fa98a384EBC70bB5749E',
   [ChainId.ARBITRUM_GOERLI]: '0x333EAE459075b1d7dE8eb57997b5d4eee5F1070a',
   [ChainId.POLYGON_ZKEVM]: '0x02a84c1b3BBD7401a5f7fa98a384EBC70bB5749E',
@@ -40,10 +44,13 @@ export const FACTORY_ADDRESS_MAP = {
 export const INIT_CODE_HASH = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5'
 
 const INIT_CODE_HASH_ETH = '0x57224589c67f3f30a6b0d7a1b54cf3153ab84563bc609ef41dfb34f8b2974d2d'
+
+export const INIT_CODE_HASH_NEXI = '0x4789e7c0b0d468754410b9a2b2f3291602e37c73929d35829b3ad2a63bcff59c'
 export const INIT_CODE_HASH_MAP = {
   [ChainId.ETHEREUM]: INIT_CODE_HASH_ETH,
   [ChainId.GOERLI]: INIT_CODE_HASH_ETH,
   [ChainId.BSC]: INIT_CODE_HASH,
+  [ChainId.NEXI]: INIT_CODE_HASH_NEXI,
   [ChainId.BSC_TESTNET]: '0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66',
   [ChainId.ARBITRUM_ONE]: INIT_CODE_HASH_ETH,
   [ChainId.ARBITRUM_GOERLI]: INIT_CODE_HASH_ETH,
@@ -172,10 +179,22 @@ export const WBNB = {
   ),
 }
 
+export const WNEXI = {
+  [ChainId.NEXI]: new ERC20Token(
+    ChainId.NEXI,
+    '0xEC3ceC066E5b2331fCD0Eb7eE5A9B17F617A6efb',
+    18,
+    'WNEXI',
+    'Wrapped NEXI',
+    'https://www.nexi.technology'
+  ),
+}
+
 export const WNATIVE = {
   [ChainId.ETHEREUM]: WETH9[ChainId.ETHEREUM],
   [ChainId.GOERLI]: WETH9[ChainId.GOERLI],
   [ChainId.BSC]: WBNB[ChainId.BSC],
+  [ChainId.NEXI]: WNEXI[ChainId.NEXI],
   [ChainId.BSC_TESTNET]: WBNB[ChainId.BSC_TESTNET],
   [ChainId.ARBITRUM_ONE]: WETH9[ChainId.ARBITRUM_ONE],
   [ChainId.ARBITRUM_GOERLI]: WETH9[ChainId.ARBITRUM_GOERLI],
@@ -199,6 +218,11 @@ export const NATIVE = {
   [ChainId.BSC_TESTNET]: {
     name: 'Binance Chain Native Token',
     symbol: 'tBNB',
+    decimals: 18,
+  },
+  [ChainId.NEXI]: {
+    name: 'Nexi Chain Native Token',
+    symbol: 'NEXI',
     decimals: 18,
   },
   [ChainId.ARBITRUM_ONE]: ETHER,

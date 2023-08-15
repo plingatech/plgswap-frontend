@@ -13,6 +13,10 @@ const defaultTokenAndPoolList: TokenAndPoolList = {
     tokens: [],
     pools: [],
   },
+  [ChainId.NEXI]: {
+    tokens: [],
+    pools: [],
+  },
   [ChainId.GOERLI]: {
     tokens: [],
     pools: [],

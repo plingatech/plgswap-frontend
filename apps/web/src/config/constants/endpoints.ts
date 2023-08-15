@@ -26,6 +26,7 @@ export const V3_BSC_INFO_CLIENT = `https://open-platform.nodereal.io/${
 
 export const INFO_CLIENT_ETH = 'https://api.thegraph.com/subgraphs/name/pancakeswap/exhange-eth'
 export const BLOCKS_CLIENT = 'https://api.thegraph.com/subgraphs/name/pancakeswap/blocks'
+export const BLOCKS_CLIENT_NEXI = 'https://api.thegraph.com/subgraphs/name/pancakeswap/blocks'
 export const BLOCKS_CLIENT_ETH = 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks'
 export const BLOCKS_CLIENT_POLYGON_ZKEVM =
   'https://api.studio.thegraph.com/query/45376/polygon-zkevm-block/version/latest'
@@ -45,6 +46,7 @@ export const CELER_API = 'https://api.celerscan.com/scan'
 
 export const INFO_CLIENT_WITH_CHAIN = {
   [ChainId.BSC]: INFO_CLIENT,
+  [ChainId.NEXI]: INFO_CLIENT,
   [ChainId.ETHEREUM]: INFO_CLIENT_ETH,
   [ChainId.POLYGON_ZKEVM]: 'https://api.studio.thegraph.com/query/45376/exchange-v2-polygon-zkevm/version/latest',
   [ChainId.ZKSYNC_TESTNET]: 'https://api.studio.thegraph.com/query/45376/exchange-v2-zksync-testnet/version/latest',
@@ -55,6 +57,7 @@ export const INFO_CLIENT_WITH_CHAIN = {
 
 export const BLOCKS_CLIENT_WITH_CHAIN = {
   [ChainId.BSC]: BLOCKS_CLIENT,
+  [ChainId.NEXI]: BLOCKS_CLIENT,
   [ChainId.ETHEREUM]: BLOCKS_CLIENT_ETH,
   [ChainId.POLYGON_ZKEVM]: BLOCKS_CLIENT_POLYGON_ZKEVM,
   [ChainId.ZKSYNC]: BLOCKS_CLIENT_ZKSYNC,
@@ -68,6 +71,7 @@ export const V3_SUBGRAPH_URLS = {
   [ChainId.GOERLI]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-goerli',
   [ChainId.BSC]: `https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-bsc`,
   [ChainId.BSC_TESTNET]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-chapel',
+  [ChainId.NEXI]: `https://api.nexi.v3.thegraph.nexi.technology`,
   [ChainId.ARBITRUM_ONE]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-arb',
   [ChainId.ARBITRUM_GOERLI]: 'https://api.thegraph.com/subgraphs/name/chef-jojo/exhange-v3-arb-goerli',
   [ChainId.POLYGON_ZKEVM]: 'https://api.studio.thegraph.com/query/45376/exchange-v3-polygon-zkevm/v0.0.0',
