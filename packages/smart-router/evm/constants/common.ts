@@ -10,6 +10,8 @@ export const BETTER_TRADE_LESS_HOPS_THRESHOLD = new Percent(50n, BIPS_BASE)
 
 export const CHAIN_ID_TO_CHAIN_NAME = {
   [ChainId.BSC]: 'bsc',
+  [ChainId.PLINGA]: 'plinga',
+  [ChainId.NEXI]: 'nexi',
   [ChainId.ETHEREUM]: 'ethereum',
   [ChainId.GOERLI]: '',
   [ChainId.BSC_TESTNET]: '',

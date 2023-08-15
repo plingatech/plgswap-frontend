@@ -20,6 +20,8 @@ const DEFAULT_BATCH_RETRIES = 2
 const SUCCESS_RATE_CONFIG = {
   [ChainId.BSC_TESTNET]: 0.1,
   [ChainId.BSC]: 0.1,
+  [ChainId.PLINGA]: 0.1,
+  [ChainId.NEXI]: 0.1,
   [ChainId.ETHEREUM]: 0.1,
   [ChainId.GOERLI]: 0.1,
   [ChainId.ARBITRUM_ONE]: 0.1,
@@ -36,6 +38,8 @@ const SUCCESS_RATE_CONFIG = {
 const BLOCK_CONFLICT_TOLERANCE = {
   [ChainId.BSC_TESTNET]: 3,
   [ChainId.BSC]: 3,
+  [ChainId.PLINGA]: 3,
+  [ChainId.NEXI]: 3,
   [ChainId.ETHEREUM]: 1,
   [ChainId.GOERLI]: 1,
   [ChainId.ARBITRUM_ONE]: 5,

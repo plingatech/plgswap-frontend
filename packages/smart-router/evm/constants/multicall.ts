@@ -33,6 +33,8 @@ export const BATCH_MULTICALL_CONFIGS: ChainMap<BatchMulticallConfigs> = {
       multicallChunk: 45,
     },
   },
+  [ChainId.PLINGA]: DEFAULT,
+  [ChainId.NEXI]: DEFAULT,
   [ChainId.ETHEREUM]: DEFAULT,
   [ChainId.GOERLI]: DEFAULT,
   [ChainId.ARBITRUM_ONE]: {

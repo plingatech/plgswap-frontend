@@ -22,6 +22,7 @@
     "build:aptos": "turbo run build --filter=aptos-web...",
     "build:bridge": "turbo run build --filter=bridge...",
     "build:packages": "turbo run build --filter=./packages/*",
+    "build:modules": "cd packages/swap-sdk-core && pnpm install && pnpm build && cd ../swap-sdk && pnpm install && pnpm build && cd ../token-lists && pnpm install && pnpm build && cd ../tokens && pnpm install && pnpm build && cd ../v3-sdk && pnpm install && pnpm build && cd ../wagmi && pnpm install && pnpm build",
     "start": "turbo run start --filter=web",
     "test:config": "pnpm turbo run test:config --filter=web...[HEAD^1]",
     "test:ci": "pnpm turbo run test --filter=[HEAD^1]",
