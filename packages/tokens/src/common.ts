@@ -9,24 +9,6 @@ export const CAKE_MAINNET = new ERC20Token(
   'https://pancakeswap.finance/',
 )
 
-export const KITKAT_MAINNET = new ERC20Token(
-  ChainId.PLINGA,
-  '0x8Cd10c064C5118c75f1650F286772694c2E97f57',
-  18,
-  'KITKAT',
-  'Kitkat Token',
-  'https://www.plgswap.com/',
-)
-
-export const ORBITEX_MAINNET = new ERC20Token(
-  ChainId.NEXI,
-  '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82',
-  18,
-  'ORBITEX',
-  'Orbitex Token',
-  'https://www.orbitex.online/',
-)
-
 export const CAKE_TESTNET = new ERC20Token(
   ChainId.BSC_TESTNET,
   '0x8d008B313C1d6C7fE2982F62d32Da7507cF43551',
@@ -73,33 +55,6 @@ export const USDC_GOERLI = new ERC20Token(
 export const USDT_BSC = new ERC20Token(
   ChainId.BSC,
   '0x55d398326f99059fF775485246999027B3197955',
-  18,
-  'USDT',
-  'Tether USD',
-  'https://tether.to/',
-)
-
-export const USDT_NEXI = new ERC20Token(
-  ChainId.NEXI,
-  '0x69F6c3e18028012Fbad46A9e940889daF6b4241D',
-  18,
-  'USDT',
-  'Tether USD',
-  'https://tether.to/',
-)
-
-export const CASHUSD_NEXI = new ERC20Token(
-  ChainId.NEXI,
-  '0x69F6c3e18028012Fbad46A9e940889daF6b4241D',
-  18,
-  'CASHUSD',
-  'CashUSD',
-  'https://cashusd.online/',
-)
-
-export const USDT_PLINGA = new ERC20Token(
-  ChainId.PLINGA,
-  '0xA60e7e82560165a150F05e75F59bb8499D76AE12',
   18,
   'USDT',
   'Tether USD',
@@ -262,8 +217,6 @@ export const USDC = {
 }
 
 export const USDT = {
-  [ChainId.NEXI]: USDT_NEXI,
-  [ChainId.PLINGA]: USDT_PLINGA,
   [ChainId.BSC]: USDT_BSC,
   [ChainId.ETHEREUM]: USDT_ETH,
   [ChainId.ARBITRUM_ONE]: new ERC20Token(
@@ -308,8 +261,6 @@ export const STABLE_COIN = {
   [ChainId.ETHEREUM]: USDT[ChainId.ETHEREUM],
   [ChainId.GOERLI]: USDC[ChainId.GOERLI],
   [ChainId.BSC]: USDT[ChainId.BSC],
-  [ChainId.PLINGA]: USDT[ChainId.PLINGA],
-  [ChainId.NEXI]: CASHUSD_NEXI,
   [ChainId.BSC_TESTNET]: BUSD[ChainId.BSC_TESTNET],
   [ChainId.ARBITRUM_ONE]: USDC[ChainId.ARBITRUM_ONE],
   [ChainId.ARBITRUM_GOERLI]: USDC[ChainId.ARBITRUM_GOERLI],
