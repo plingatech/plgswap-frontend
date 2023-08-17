@@ -2,6 +2,7 @@ import { ChainId, ERC20Token } from '@pancakeswap/sdk'
 import {
   bscTestnetTokens,
   bscTokens,
+  nexiTokens,
   ethereumTokens,
   goerliTestnetTokens,
   zkSyncTestnetTokens,
@@ -14,6 +15,8 @@ import type { FarmV3SupportedChainId } from '../../src'
 
 export const CAKE_BNB_LP_MAINNET = '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0'
 
+// export const CAKE_BNB_LP_MAINNET = '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0'
+
 export type PriceHelper = {
   chain: string
   list: ERC20Token[]
@@ -21,6 +24,7 @@ export type PriceHelper = {
 
 export const CHAIN_ID_TO_CHAIN_NAME = {
   [ChainId.BSC]: 'bsc',
+  [ChainId.NEXI]: 'nexi',
   [ChainId.ETHEREUM]: 'ethereum',
   [ChainId.GOERLI]: 'ethereum',
   [ChainId.BSC_TESTNET]: 'bsc',
@@ -39,6 +43,10 @@ export const priceHelperTokens = {
   [ChainId.BSC]: {
     chain: 'bsc',
     list: [bscTokens.wbnb, bscTokens.usdt, bscTokens.busd, bscTokens.eth],
+  },
+  [ChainId.NEXI]: {
+    chain: 'bsc',
+    list: [nexiTokens.wnexi, nexiTokens.usdt, nexiTokens.cashusd, nexiTokens.orbitex],
   },
   [ChainId.POLYGON_ZKEVM]: {
     chain: 'polygon_zkevm',
@@ -61,6 +69,7 @@ export const DEFAULT_COMMON_PRICE: Record<FarmV3SupportedChainId, CommonPrice> =
     [goerliTestnetTokens.mockA.address]: '10',
   },
   [ChainId.BSC]: {},
+  [ChainId.NEXI]: {},
   [ChainId.BSC_TESTNET]: {
     [bscTestnetTokens.mockA.address]: '10',
     [bscTestnetTokens.usdt.address]: '1',
