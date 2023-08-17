@@ -4,6 +4,12 @@ export const CORS_ALLOW = [
   /\.pancakeswap\.com$/,
   'https://pancakeswap.finance',
   'https://pancakeswap.com',
+  'https://orbitex.online',
+  'https://www.orbitex.online',
+  'https://www.nexiswap.finance',
+  'https://nexiswap.finance',
+  'https://www.plgswap.com',
+  'https://plgswap.com',
   /^http:\/\/localhost(:\d+)?$/,
 ]
 

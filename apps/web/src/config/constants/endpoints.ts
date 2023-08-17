@@ -64,7 +64,7 @@ export const BLOCKS_CLIENT_WITH_CHAIN = {
   [ChainId.ARBITRUM_ONE]: 'https://api.thegraph.com/subgraphs/name/ianlapham/arbitrum-one-blocks',
 }
 
-export const ASSET_CDN = 'https://assets.nexi.technology'
+export const ASSET_CDN = 'https://assets.nexi.technology/defi'
 
 export const V3_SUBGRAPH_URLS = {
   [ChainId.ETHEREUM]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-eth',
