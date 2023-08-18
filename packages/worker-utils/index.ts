@@ -11,6 +11,7 @@ export const CORS_ALLOW = [
   'https://www.plgswap.com',
   'https://plgswap.com',
   /^http:\/\/localhost(:\d+)?$/,
+  /^http:\/\/10\.42\.(\d+)\.(\d+)(:\d+)?$/,
 ]
 
 function isString(s: any): s is string {
