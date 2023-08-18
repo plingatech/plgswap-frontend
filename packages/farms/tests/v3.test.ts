@@ -8,6 +8,7 @@ import { CommonPrice, getFarmsPrices } from '../src/fetchFarmsV3'
 const mainnetFarms = [
   farmsV3ConfigChainMap[ChainId.BSC],
   farmsV3ConfigChainMap[ChainId.ETHEREUM],
+  farmsV3ConfigChainMap[ChainId.NEXI],
   farmsV3ConfigChainMap[ChainId.POLYGON_ZKEVM],
   farmsV3ConfigChainMap[ChainId.ZKSYNC],
   farmsV3ConfigChainMap[ChainId.ARBITRUM_ONE],

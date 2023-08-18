@@ -8,18 +8,21 @@ import {
   PCS_ETH_START,
   PCS_V2_START,
   TOKEN_BLACKLIST,
+  NEXI_TOKEN_BLACKLIST,
+  NEXI_TOKEN_WHITELIST,
   BSC_TOKEN_WHITELIST,
   ETH_TOKEN_WHITELIST,
 } from 'config/constants/info'
-import { arbitrum, bsc, mainnet, polygonZkEvm, zkSync } from 'wagmi/chains'
+import { arbitrum, bsc, mainnet, polygonZkEvm, zkSync,nexi } from 'wagmi/chains'
 
-export type MultiChainName = 'BSC' | 'ETH' | 'POLYGON_ZKEVM' | 'ZKSYNC' | 'ARB'
+export type MultiChainName = 'BSC' | 'ETH' | 'POLYGON_ZKEVM' | 'ZKSYNC' | 'ARB' | 'NEXI'
 
 export type MultiChainNameExtend = MultiChainName | 'BSC_TESTNET' | 'ZKSYNC_TESTNET'
 
 export const multiChainName: Record<number | string, MultiChainNameExtend> = {
   [ChainId.BSC]: 'BSC',
   [ChainId.ETHEREUM]: 'ETH',
+  [ChainId.NEXI]: 'NEXI',
   [ChainId.BSC_TESTNET]: 'BSC_TESTNET',
   [ChainId.POLYGON_ZKEVM]: 'POLYGON_ZKEVM',
   [ChainId.ZKSYNC]: 'ZKSYNC',
@@ -32,6 +35,7 @@ export const multiChainShortName: Record<number, string> = {
 export const multiChainQueryMainToken: Record<MultiChainName, string> = {
   BSC: 'BNB',
   ETH: 'ETH',
+  NEXI: 'NEXI',
   POLYGON_ZKEVM: 'ETH',
   ZKSYNC: 'ETH',
   ARB: 'ARB',
@@ -40,6 +44,7 @@ export const multiChainQueryMainToken: Record<MultiChainName, string> = {
 export const multiChainBlocksClient: Record<MultiChainNameExtend, string> = {
   BSC: BLOCKS_CLIENT,
   ETH: BLOCKS_CLIENT_ETH,
+  NEXI: BLOCKS_CLIENT_ETH,
   BSC_TESTNET: 'https://api.thegraph.com/subgraphs/name/lengocphuc99/bsc_testnet-blocks',
   POLYGON_ZKEVM: 'https://api.studio.thegraph.com/query/45376/polygon-zkevm-block/version/latest',
   ZKSYNC_TESTNET: 'https://api.studio.thegraph.com/query/45376/blocks-zksync-testnet/version/latest',
@@ -57,6 +62,7 @@ export const multiChainStartTime = {
 
 export const multiChainId: Record<MultiChainName, ChainId> = {
   BSC: ChainId.BSC,
+  NEXI: ChainId.NEXI,
   ETH: ChainId.ETHEREUM,
   POLYGON_ZKEVM: ChainId.POLYGON_ZKEVM,
   ZKSYNC: ChainId.ZKSYNC,
@@ -65,6 +71,7 @@ export const multiChainId: Record<MultiChainName, ChainId> = {
 
 export const multiChainPaths = {
   [ChainId.BSC]: '',
+  [ChainId.NEXI]: '/nexi',
   [ChainId.ETHEREUM]: '/eth',
   [ChainId.POLYGON_ZKEVM]: '/polygon-zkevm',
   [ChainId.ZKSYNC]: `/zksync`,
@@ -81,6 +88,7 @@ export const multiChainQueryClient = {
 
 export const multiChainScan: Record<MultiChainName, string> = {
   BSC: bsc.blockExplorers.etherscan.name,
+  NEXI: nexi.blockExplorers.default.name,
   ETH: mainnet.blockExplorers.etherscan.name,
   POLYGON_ZKEVM: polygonZkEvm.blockExplorers.default.name,
   ZKSYNC: zkSync.blockExplorers.default.name,
@@ -90,6 +98,7 @@ export const multiChainScan: Record<MultiChainName, string> = {
 export const multiChainTokenBlackList: Record<MultiChainName, string[]> = {
   BSC: TOKEN_BLACKLIST,
   ETH: ETH_TOKEN_BLACKLIST,
+  NEXI: ['0x'],
   POLYGON_ZKEVM: ['0x'],
   ZKSYNC: ['0x'],
   ARB: ['0x'],
@@ -101,6 +110,7 @@ export const multiChainTokenWhiteList: Record<MultiChainName, string[]> = {
   POLYGON_ZKEVM: [],
   ZKSYNC: [],
   ARB: [],
+  NEXI: [],
 }
 
 export const getMultiChainQueryEndPointWithStableSwap = (chainName: MultiChainNameExtend): GraphQLClient => {

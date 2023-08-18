@@ -211,6 +211,14 @@ const EthTag: React.FC<React.PropsWithChildren<TagProps>> = (props) => {
   );
 };
 
+const NexiTag: React.FC<React.PropsWithChildren<TagProps>> = (props) => {
+  return (
+    <Tag style={{ background: "#627EEA" }} startIcon={<EthChainIcon width="10px" mr="4px" />} {...props}>
+      NEXI
+    </Tag>
+  );
+};
+
 const BscTag: React.FC<React.PropsWithChildren<TagProps>> = (props) => {
   return (
     <Tag style={{ background: "#08060B" }} startIcon={<BinanceChainIcon width="18px" mr="4px" />} {...props}>
@@ -258,6 +266,7 @@ const Tags = {
   V3FeeTag,
   V3Tag,
   EthTag,
+  NexiTag
   BscTag,
   ZkEVMTag,
   ZkSyncTag,

@@ -5,6 +5,7 @@ import { ChainId, Token, Currency } from "@pancakeswap/sdk";
 const mapping: { [key: number]: string } = {
   [ChainId.BSC]: "smartchain",
   [ChainId.ETHEREUM]: "ethereum",
+  [ChainId.NEXI]: "nexi",
   [ChainId.POLYGON_ZKEVM]: "polygonzkevm",
   [ChainId.ARBITRUM_ONE]: "arbitrum",
   [ChainId.ZKSYNC]: "zksync",

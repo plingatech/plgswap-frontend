@@ -51,3 +51,7 @@ export const ETH_TOKEN_WHITELIST = [
   '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
   '0x993864e43caa7f7f12953ad6feb1d1ca635b875f',
 ]
+
+export const NEXI_TOKEN_BLACKLIST = []
+export const NEXI_TOKEN_WHITELIST = [
+]

@@ -1,11 +1,12 @@
 import { ChainId } from '@pancakeswap/sdk'
 import { createPublicClient, http, PublicClient } from 'viem'
-import { bsc, bscTestnet, goerli, mainnet, zkSyncTestnet, polygonZkEvm, zkSync, arbitrum } from 'viem/chains'
+import { bsc,nexi, bscTestnet, goerli, mainnet, zkSyncTestnet, polygonZkEvm, zkSync, arbitrum } from 'viem/chains'
 
 const requireCheck = [
   ETH_NODE,
   GOERLI_NODE,
   BSC_NODE,
+  NEXI_NODE,
   BSC_TESTNET_NODE,
   POLYGON_ZKEVM_NODE,
   ZKSYNC_NODE,
@@ -30,6 +31,16 @@ const mainnetClient = createPublicClient({
 export const bscClient: PublicClient = createPublicClient({
   chain: bsc,
   transport: http(BSC_NODE),
+  batch: {
+    multicall: {
+      batchSize: 1024 * 200,
+    },
+  },
+})
+
+export const nexiClient: PublicClient = createPublicClient({
+  chain: nexi,
+  transport: http(NEXI_NODE),
   batch: {
     multicall: {
       batchSize: 1024 * 200,
@@ -111,6 +122,8 @@ export const viemProviders = ({ chainId }: { chainId?: ChainId }): PublicClient 
       return mainnetClient
     case ChainId.BSC:
       return bscClient
+      case ChainId.NEXI:
+        return nexiClient
     case ChainId.BSC_TESTNET:
       return bscTestnetClient
     case ChainId.GOERLI:

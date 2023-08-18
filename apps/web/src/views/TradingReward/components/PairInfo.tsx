@@ -13,7 +13,7 @@ const TokenWrapper = styled.div`
   }
 `
 
-const { V3Tag, V3FeeTag, EthTag, BscTag, ZkEVMTag, ZkSyncTag } = FarmUI.Tags
+const { V3Tag, V3FeeTag, EthTag, BscTag, ZkEVMTag, ZkSyncTag, NexiTag } = FarmUI.Tags
 
 interface PairInfoProps {
   isReady: boolean
@@ -72,6 +72,7 @@ const PairInfo: React.FunctionComponent<React.PropsWithChildren<PairInfoProps>> 
             <Flex ml="4px">
               {chainId === ChainId.ETHEREUM && <EthTag />}
               {chainId === ChainId.BSC && <BscTag />}
+              {chainId === ChainId.NEXI && <NexiTag />}
               {chainId === ChainId.POLYGON_ZKEVM && <ZkEVMTag />}
               {chainId === ChainId.ZKSYNC && <ZkSyncTag />}
             </Flex>
