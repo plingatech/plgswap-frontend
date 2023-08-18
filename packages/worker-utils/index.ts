@@ -10,6 +10,7 @@ export const CORS_ALLOW = [
   'https://nexiswap.finance',
   'https://www.plgswap.com',
   'https://plgswap.com',
+  'http://10.42.0.100:3000',
   /^http:\/\/localhost(:\d+)?$/,
   /^http:\/\/10\.42\.(\d+)\.(\d+)(:\d+)?$/,
 ]

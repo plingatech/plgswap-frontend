@@ -266,7 +266,7 @@ const Tags = {
   V3FeeTag,
   V3Tag,
   EthTag,
-  NexiTag
+  NexiTag,
   BscTag,
   ZkEVMTag,
   ZkSyncTag,
