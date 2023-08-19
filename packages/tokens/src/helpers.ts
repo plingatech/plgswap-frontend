@@ -5,10 +5,8 @@ import { TokenAddressMap } from '@pancakeswap/token-lists'
  * An empty result, useful as a default.
  */
 export const EMPTY_LIST: TokenAddressMap<ChainId> = {
-  [ChainId.ETHEREUM]: {},
-  [ChainId.GOERLI]: {},
   [ChainId.BSC]: {},
-  [ChainId.BSC_TESTNET]: {},
+  [ChainId.NEXI]: {},
 }
 
 export function serializeTokens(unserializedTokens) {

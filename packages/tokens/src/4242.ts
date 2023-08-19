@@ -1,0 +1,65 @@
+import { ChainId, WNEXI, ERC20Token } from '@pancakeswap/sdk'
+import { CASHUSD_NEXI, USDT_NEXI, ORBITEX_MAINNET } from './common'
+
+export const nexiTokens = {
+  wnexi: WNEXI[ChainId.NEXI],
+  nexi: new ERC20Token(
+    ChainId.NEXI,
+    '0xEC3ceC066E5b2331fCD0Eb7eE5A9B17F617A6efb',
+    18,
+    'NEXI',
+    'NEXI',
+    'https://www.nexi.technology/',
+  ),
+  usdt: USDT_NEXI,
+  cashusd: CASHUSD_NEXI,
+  vland: new ERC20Token(
+    ChainId.NEXI,
+    '0xdF397Aeee4950Aafb7DaD6345747337B510B4951',
+    18,
+    'VLAND',
+    'Metaverse Land',
+    'https://www.nexi.technology/',
+  ),
+  aig: new ERC20Token(
+    ChainId.NEXI,
+    '0x9032ba5aa0d59888E582E8aa5893b53b07DEceC1',
+    18,
+    'AIG',
+    'AI Game',
+    'https://www.nexi.technology/',
+  ),
+  cog: new ERC20Token(
+    ChainId.NEXI,
+    '0x1F1FdCf76847E8e9C00048a33dFf1246912a7Fc2',
+    18,
+    'COG',
+    'Cognito',
+    'https://www.nexi.technology/',
+  ),
+  elg: new ERC20Token(
+    ChainId.NEXI,
+    '0xEA52c1F8Ef64c3BfCc043e01081618b5A7159bD1',
+    18,
+    'ELG',
+    'Elegance',
+    'https://www.nexi.technology/',
+  ),
+  nptpro: new ERC20Token(
+    ChainId.NEXI,
+    '0x883277f7D623612034db92A2dC16A8BEC20a8FB5',
+    18,
+    'NFTPRO',
+    'Nftpro',
+    'https://www.nexi.technology/',
+  ),
+  power: new ERC20Token(
+    ChainId.NEXI,
+    '0x47fbc1D04511bfB1C3d64DA950c88815D02114F4',
+    18,
+    'POWER',
+    'Power Pay',
+    'https://www.nexi.technology/',
+  ),
+  orbitex: ORBITEX_MAINNET,
+}
